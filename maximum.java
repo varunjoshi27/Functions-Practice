@@ -28,6 +28,19 @@ public class maximum {
             }
         }
         System.out.println("The minimum element is : " + min);
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                max = min;
+                min = arr[i];
+
+            }
+            if (min == Integer.MIN_VALUE) {
+                System.out.println("No second largest element (all elements might be equal).");
+            } else {
+                System.out.println("Second largest element is: " + min);
+            }
+        }
         sc.close();
 
     }

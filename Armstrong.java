@@ -1,43 +1,26 @@
 import java.util.Scanner;
 
 public class Armstrong {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the number: ");
         int n = sc.nextInt();
-
         int dup = n;
         int sum = 0;
-        int digits = 0;
-        int temp = n;
+        int digits = (n == 0) ? 1 : (int) Math.log10(n) + 1;
 
-        // Count the number of digits
-        while (temp > 0) {
-            digits++;
-            temp = temp / 10;
+        while (n > 0) {
+            int ld = n % 10;
+            n = n / 10;
+            sum = sum + (int) Math.pow(ld, digits);
+
         }
-
-        temp = n;
-        while (temp > 0) {
-            int ld = temp % 10;
-            int power = 1;
-
-            // Calculate ld raised to the power of 'digits'
-            for (int i = 0; i < digits; i++) {
-                power *= ld;
-            }
-
-            sum += power;
-            temp = temp / 10;
-        }
-
-        if (dup == sum) {
-            System.out.println(dup + " is an Armstrong number");
+        if (sum == dup) {
+            System.out.println("True");
         } else {
-            System.out.println(dup + " is not an Armstrong number");
+            System.out.println("False");
         }
-
         sc.close();
     }
 }

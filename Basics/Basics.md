@@ -21,4 +21,9 @@
 - Developed to make it Easier to Deploy, Debug and reuse.
 
 ## What are Classes ?
+
 - They are the named Group of Properties and Functions in Called as Classes
+
+## Conditionals And Loops in Java:
+
+- It is used to check the condition in the code that is we can check the conditions for doing various operations so that it can be used to check the execution in the code

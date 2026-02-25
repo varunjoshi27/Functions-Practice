@@ -18,6 +18,12 @@ public class Largest {
             max = c;
         }
 
+        /*
+         * We can also use the in-built Math.max() function to find the largest number
+         * among the three numbers as follows:
+         */
+
+        // int max = Math.max(a, Math.max(b, c));
         System.out.println("Largest number is " + max);
         in.close();
     }
